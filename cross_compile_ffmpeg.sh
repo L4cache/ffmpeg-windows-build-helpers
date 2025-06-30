@@ -1885,7 +1885,7 @@ build_avisynth() {
 
 build_libx265() {
   local checkout_dir=x265
-  local remote="https://bitbucket.org/multicoreware/x265_git"
+  local remote="https://github.com/L4cache/x265_git"
   if [[ ! -z $x265_git_checkout_version ]]; then
     checkout_dir+="_$x265_git_checkout_version"
     do_git_checkout "$remote" $checkout_dir "$x265_git_checkout_version"
@@ -1895,7 +1895,7 @@ build_libx265() {
       do_git_checkout "$remote" $checkout_dir "origin/master"
     fi
     if [[ $prefer_stable = "y" ]]; then
-      do_git_checkout "$remote" $checkout_dir "origin/stable"
+      do_git_checkout "$remote" $checkout_dir "origin/stableM"
     fi
   fi
   cd $checkout_dir
