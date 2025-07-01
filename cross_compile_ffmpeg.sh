@@ -3078,8 +3078,9 @@ if [[ $compiler_flavors == "multi" || $compiler_flavors == "win64" ]]; then
   work_dir="$(realpath $cur_dir/win64)"
   mkdir -p "$work_dir"
   cd "$work_dir"
-    build_ffmpeg_dependencies
-    build_apps
+    # build_ffmpeg_dependencies
+    # build_apps
+    build_libx265
   cd ..
 fi
 
